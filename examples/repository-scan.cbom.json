@@ -1,0 +1,225 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:11111111-1111-4111-8111-111111111111",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-23T21:43:19.068Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "group": "QuantumReady",
+          "name": "QuantumReady Discovery Engine",
+          "version": "0.10.14",
+          "publisher": "QuantumReady"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "bom-ref": "app:project",
+      "name": "project",
+      "version": "working tree"
+    },
+    "properties": [
+      {
+        "name": "quantumready:engine.name",
+        "value": "QuantumReady Discovery Engine"
+      },
+      {
+        "name": "quantumready:engine.version",
+        "value": "0.10.14"
+      },
+      {
+        "name": "quantumready:report.id",
+        "value": "sample-report-0001"
+      },
+      {
+        "name": "quantumready:scope",
+        "value": "project"
+      },
+      {
+        "name": "quantumready:scan.kind",
+        "value": "local"
+      },
+      {
+        "name": "quantumready:target.ref",
+        "value": "working tree"
+      },
+      {
+        "name": "quantumready:score.method",
+        "value": "Each distinct algorithm is weighted by category importance and by how often it appears in production code. Quantum-vulnerable algorithms count fully against the score, deprecated ones at 75 percent, adequate ones at 20 percent, and quantum-resistant or post-quantum ones at zero. Small bonuses apply for post-quantum signals and strong symmetric encryption. Findings that appear only in tests, fixtures or examples are excluded from the score, and so are inventory records that describe what you have rather than what is wrong with it. The score does not discount an algorithm because a provider owns the fix: it measures the cryptography found, and the owner column says where the work sits. This is our own index and is not the CSA Quantum Readiness Index."
+      },
+      {
+        "name": "quantumready:coverage.complete",
+        "value": "true"
+      },
+      {
+        "name": "quantumready:coverage.filesScanned",
+        "value": "1"
+      },
+      {
+        "name": "quantumready:coverage.filesConsidered",
+        "value": "1"
+      },
+      {
+        "name": "quantumready:coverage.bytesScanned",
+        "value": "105"
+      },
+      {
+        "name": "quantumready:limit.files",
+        "value": "3000"
+      },
+      {
+        "name": "quantumready:limit.bytes",
+        "value": "12582912"
+      },
+      {
+        "name": "quantumready:limit.fileBytes",
+        "value": "524288"
+      },
+      {
+        "name": "quantumready:limit.findings",
+        "value": "3000"
+      },
+      {
+        "name": "quantumready:limit.milliseconds",
+        "value": "9000"
+      },
+      {
+        "name": "quantumready:limitation",
+        "value": "This scan reads source and configuration files only. It does not inspect compiled binaries, container images, hardware security modules, live databases, or runtime key stores."
+      },
+      {
+        "name": "quantumready:limitation",
+        "value": "Detection is pattern based. Dynamically constructed algorithm names, reflection, generated code and encrypted configuration can be missed."
+      },
+      {
+        "name": "quantumready:limitation",
+        "value": "Comments are removed before matching, so a note that mentions an algorithm is not reported as one. Cryptography referenced only in a comment is therefore out of scope by design."
+      },
+      {
+        "name": "quantumready:limitation",
+        "value": "Where several files have identical contents, the code is read once and the other paths are listed against the finding rather than counted again."
+      },
+      {
+        "name": "quantumready:limitation",
+        "value": "Every surviving finding is checked a second time before it appears here: the rule has to still match the code, the match has to be in code rather than prose, a secret has to be a value rather than a reference, a private key header has to have a key under it, and any claim that a provider owns the fix has to point at the token in the file that supports it. What the second pass removed is listed with its reason."
+      },
+      {
+        "name": "quantumready:limitation",
+        "value": "Third-party dependencies are reported from manifest files, not by scanning the dependency source tree."
+      },
+      {
+        "name": "quantumready:limitation",
+        "value": "Reports include matched source excerpts and file paths. Evidence text is redacted for files where sensitive material was detected, but undetected secrets may remain. Review reports before upload or sharing."
+      },
+      {
+        "name": "quantumready:limitation",
+        "value": "Repositories larger than the scan budget are truncated. See the coverage section for exact counts."
+      },
+      {
+        "name": "quantumready:limitation",
+        "value": "Every finding carries an evidence level, from Detected to Runtime confirmed, and the report never claims more than that level supports. A finding at Likely used is in production code but has not been proven to ship."
+      },
+      {
+        "name": "quantumready:limitation",
+        "value": "Automated scanning cannot establish regulatory compliance. Compliance needs customer attestation, documentation and human review."
+      },
+      {
+        "name": "quantumready:verification.checked",
+        "value": "1"
+      },
+      {
+        "name": "quantumready:verification.confirmed",
+        "value": "1"
+      },
+      {
+        "name": "quantumready:verification.adjusted",
+        "value": "0"
+      },
+      {
+        "name": "quantumready:verification.dropped",
+        "value": "0"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto:project:md5:128:any:any:any:prod",
+      "name": "MD5",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "hash",
+          "algorithmFamily": "MD5",
+          "parameterSetIdentifier": "128",
+          "cryptoFunctions": [
+            "digest"
+          ]
+        }
+      },
+      "properties": [
+        {
+          "name": "quantumready:risk",
+          "value": "deprecated-or-weak"
+        },
+        {
+          "name": "quantumready:riskLabel",
+          "value": "Deprecated or weak"
+        },
+        {
+          "name": "quantumready:owner",
+          "value": "you"
+        },
+        {
+          "name": "quantumready:action",
+          "value": "fix-now"
+        },
+        {
+          "name": "quantumready:environment",
+          "value": "production"
+        },
+        {
+          "name": "quantumready:family",
+          "value": "MD5"
+        }
+      ],
+      "evidence": {
+        "identity": [
+          {
+            "field": "name",
+            "confidence": 0.53,
+            "concludedValue": "MD5",
+            "methods": [
+              {
+                "technique": "ast-fingerprint",
+                "confidence": 0.53
+              }
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "bom-ref": "occ:crypto:project:md5:128:any:any:any:prod:security-js:2:createhash",
+            "location": "security.js",
+            "line": 2,
+            "symbol": "x",
+            "additionalContext": "parse"
+          }
+        ]
+      }
+    }
+  ],
+  "compositions": [
+    {
+      "bom-ref": "composition:project",
+      "aggregate": "complete",
+      "assemblies": [
+        "app:project"
+      ]
+    }
+  ]
+}

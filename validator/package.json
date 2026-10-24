@@ -1,0 +1,19 @@
+{
+  "name": "@quantumready/cbom-validator",
+  "version": "0.1.0",
+  "description": "Validate a CycloneDX 1.7 CBOM against the QuantumReady profile.",
+  "type": "module",
+  "bin": {
+    "quantumready-cbom-validate": "./index.mjs"
+  },
+  "scripts": {
+    "test": "node --test test.mjs"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "index.mjs"
+  ]
+}
