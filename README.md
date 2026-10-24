@@ -1,4 +1,22 @@
-# QuantumReady CBOM profile
+<p align="center">
+  <img src="assets/logo.svg" width="72" alt="QuantumReady logo">
+</p>
+
+<h1 align="center">QuantumReady CBOM profile</h1>
+
+<p align="center">
+  <strong>Cryptographic inventory for post-quantum migration</strong><br>
+  by <a href="https://getquantumready.app">Contemporary</a>
+</p>
+
+<p align="center">
+  <a href="https://getquantumready.app">Website</a> ·
+  <a href="https://getquantumready.app/sample-report">Sample report</a> ·
+  <a href="https://getquantumready.app/methodology">Methodology</a> ·
+  <a href="https://getquantumready.app/contact">Contact</a>
+</p>
+
+![QuantumReady social card: You can't migrate what you can't see.](assets/social-card.png)
 
 A public profile for expressing **post-quantum migration evidence** in a CycloneDX 1.7
 cryptographic bill of materials (CBOM).
@@ -47,6 +65,20 @@ OK  examples/repository-scan.cbom.json
 The validator checks structure and the profile's required properties. It does not
 re-scan code and it does not certify compliance.
 
+## Name and descriptor
+
+The product is **QuantumReady**. The company is **Contemporary**. The descriptor is
+**cryptographic inventory for post-quantum migration**.
+
+Use the full lockup at first mention in a new context:
+
+> **QuantumReady by Contemporary — cryptographic inventory for post-quantum migration.**
+
+After that, “QuantumReady” alone is fine. The descriptor is not a slogan and it is not a
+second product name; it is the category phrase that tells a reader what the product does.
+QuantumReady is an independent service. It is not affiliated with Sectigo, the Cyber
+Security Agency of Singapore (CSA), GovTech, IMDA or MAS.
+
 ## Status
 
 - Profile version: **0.1**
@@ -55,18 +87,18 @@ re-scan code and it does not certify compliance.
 
 Backwards-incompatible changes get a new profile version. Additive properties do not.
 
-## Links
+## Contributing
 
-- Website: https://getquantumready.app
-- Sample report: https://getquantumready.app/sample-report
-- Methodology: https://getquantumready.app/methodology
-- Contact: https://getquantumready.app/contact
+Issues and pull requests are welcome when they make the profile easier to implement
+correctly. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md). Do not submit scanner source
+code or customer data.
 
 ## License
 
 - Documentation and the profile: [CC BY 4.0](LICENSE-DOCS)
 - Validator code: [MIT](LICENSE-CODE)
 
-QuantumReady is an independent service. It is not affiliated with the Cyber Security
-Agency of Singapore (CSA), GovTech, IMDA or MAS, and a CBOM is not a compliance
-certificate.
+---
+
+<sub>QuantumReady by Contemporary. The scanner is proprietary; this repository contains
+the public profile, examples and validator only.</sub>
